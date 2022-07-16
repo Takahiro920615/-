@@ -15,6 +15,8 @@ $ git clone https://github.com/sample-874/sample-app.git
 
 上記のコマンド実行（リポジトリをクローン）後、
 次のコマンドで必要になる RubyGems をインストールします。
+A9
+
 
 ```
 $ bundle install
