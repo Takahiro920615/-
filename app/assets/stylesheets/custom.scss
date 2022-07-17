@@ -57,16 +57,17 @@ p {
   margin-right: 10px;
   font-size: 1.7em;
   color: #fff;
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
 }
 
 #logo:hover {
-  color: #fff;
+  color: #808080;
   text-decoration: none;
 }
+
 
 /* デバッグウインドウ */
 
