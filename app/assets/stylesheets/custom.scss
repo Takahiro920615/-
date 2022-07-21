@@ -5,6 +5,9 @@
 
 body {
   padding-top: 60px;
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
 }
 
 section {
@@ -36,8 +39,8 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
-  color:#fff;
-  
+  color: black;
+  margin: 0.67rem 0;
 }
 
 h2 {
@@ -52,6 +55,20 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+  margin: 0 0 10px;
+}
+
+
+
+.row{
+  background-color: #fff;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+
+.center{
+  text-alighn: center;
 }
 
 /* ヘッダー */
@@ -88,6 +105,22 @@ li .header-list {
   color: #808080;
   text-decoration: none;
  
+}
+
+/* ボディ */
+
+#top-main-title{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.form-control{
+  background-color: #eeeeee;
+  border: 1px solid #ccc;
+  padding: 6px 12px
+}
+
+.jumbotron{
+  background-color: #fff;
 }
 
 

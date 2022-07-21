@@ -1,31 +1,41 @@
-<% provide(:title, "Top") %>
-<div class="jumbotron">
-  <h1>サンプルアプリ</h1>
-  <p>
-    皆さんの手で、この最低限の土台となるアプリケーションから<br>
-    タスク管理機能を持ったアプリケーションへと作り替えていきましょう！
-  </p>
+<!DOCTYPE html>
 
-  <p>現在このアプリケーションには、以下の機能が備わっています。</p>
-
-  <ul>
-    <li>ルートURLに対応したトップページ（このページです）</li>
-    <li>ユーザー機能
-      <ol>
-        <li>名前・メールアドレス・パスワード・ログイン認証用のカラムを持ったUserモデル</li>
-        <li>ユーザー新規登録と対応したページ</li>
-      </ol>
-    </li>
-    <li>ログイン機能
-      <ol>
-        <li>セッションによる一時的ログイン機能</li>
-        <li>Cookiesによる永続的ログイン機能</li>
-      </ol>
-    </li>
-  </ul>
-  <p>実質【勤怠チュートリアル第７章】までの機能を持ったアプリケーションとなります。</p>
-  <center>
-    <%= link_to "Sign Up", signup_path, class: "btn btn-lg btn-primary" %>
-    <%= link_to "Log In", login_path, class: "btn btn-lg btn-primary" %>
-  </center>
-</div>
+<html>
+  <head>
+    <% provide(:title, "Top") %>
+    <div class="jumbotron">
+  </head>    
+    <body>
+     <div class="container">
+  
+          <div class="row">
+            <div class="col-md-7" >
+             <center>  
+              <div class="center-jumbotron" id="top-main">
+              <h1 id="top-main-title">TaskApp</h1>
+              <p class="coment">TaskAppは簡易ToDoツールです。</p>
+              <p>↓初めてのご利用↓</p>
+           　　 <%= link_to "アカウント作成", signup_path, class: "btn btn-lg btn-success" %>
+              </div>
+             </center>
+            </div>
+        
+           <div class="col-md-4">  
+             <h1>ログイン</h1>
+             <form>
+               <h4>メールアドレス</h4>
+               <div class = "form-group">
+                 <input type = "text" class="form-control">
+               </div>
+               
+               <h4>パスワード</h4>
+               <div class = "form-group">
+                 <input type = "text" class="form-control">
+               </div>
+             </form>
+               <%= link_to "ログイン状態です", signup_path, class: "btn btn-sm btn-primary disabled w-100" %>
+             </div>
+         </div>   
+     </div>
+    </body>
+</html>
