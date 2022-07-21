@@ -17,10 +17,12 @@ textarea {
 
 .center {
   text-align: center;
+ 
 }
 
 .center h1 {
   margin-bottom: 10px;
+  
 }
 
 /* タイポグラフィ */
@@ -34,6 +36,8 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
+  color:#fff;
+  
 }
 
 h2 {
@@ -52,6 +56,23 @@ p {
 
 /* ヘッダー */
 
+li .header-list {
+  color: #fff !important;
+  font-weight: bold;
+ 
+  &:hover {
+    color: #808080 !important;
+    background-color: teal !important;   
+  }
+}
+
+
+
+ #dropdown-title {
+  background-color: teal;
+}
+
+
 #logo {
   float: left;
   margin-right: 10px;
@@ -66,6 +87,7 @@ p {
 #logo:hover {
   color: #808080;
   text-decoration: none;
+ 
 }
 
 
