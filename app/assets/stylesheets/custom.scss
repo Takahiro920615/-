@@ -6,7 +6,6 @@
 body {
   padding-top: 60px;
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
 }
 
@@ -41,15 +40,18 @@ h1 {
   text-align: center;
   color: black;
   margin: 0.67rem 0;
+  font-family: inherit;
 }
 
 h2 {
   font-size: 1.2em;
   letter-spacing: -1px;
   margin-bottom: 30px;
+   margin-top: 0px;
   text-align: center;
   font-weight: normal;
   color: #777;
+  
 }
 
 p {
@@ -99,6 +101,7 @@ li .header-list {
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
+  font-style: italic;
 }
 
 #logo:hover {
@@ -110,7 +113,8 @@ li .header-list {
 /* ボディ */
 
 #top-main-title{
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-weight: bold;
 }
 
 .form-control{
@@ -121,8 +125,16 @@ li .header-list {
 
 .jumbotron{
   background-color: #fff;
+  padding-top:0px;
 }
 
+.login{
+  font-size:30px;
+}
+
+.center-jumbotron{
+  padding-top: 48px;
+}
 
 /* デバッグウインドウ */
 
