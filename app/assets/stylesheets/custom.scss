@@ -41,30 +41,31 @@ h1 {
   color: black;
   margin: 0.67rem 0;
   font-family: inherit;
-  margin-top: 20px;
+  
 }
 
 h2 {
   font-size: 1.2em;
   letter-spacing: -1px;
   margin-bottom: 30px;
-   margin-top: 20px;
+  margin-top: 0px;
   text-align: center;
   font-weight: normal;
+}
 
 .login{
-  text-alighn: center;
+  text-align: center;
   font-size: 80px;
-  
 }
   
-}
+
 
 p {
   font-size: 0.8rem;
   line-height: 1.7em;
   margin: 0 0 10px;
 }
+
 
 
 
@@ -75,16 +76,19 @@ p {
 }
 
 
+
 .center{
   text-align: center;
 }
 
+
 .jumbotron{
-  padding-top: 48px;
-  padding-right: 60px;
-  padding-left: 60px;
+ 
+  padding-right: 60px!important;
+  padding-left: 60px!important;
   background-color: #fff;
-  padding-top:0px;
+  padding-top: 48px;
+  padding-bottom: 48px;
 }
 
 .jumbotron p{
@@ -144,10 +148,18 @@ li .header-list {
   padding: 6px 12px
 }
 
+.btn-form{
+  margin-top: 10px;
+}
+
+.form-acount{
+  margin-right: 19px;
+}
+
 
 
 .login{
-  font-size:30px;
+  font-size:45px;
 }
 
 .center-jumbotron{

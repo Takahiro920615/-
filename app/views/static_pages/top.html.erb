@@ -3,21 +3,22 @@
 <html>
   <head>
     <% provide(:title, "Top") %>
-    <div class="jumbotron">
+    
   </head>    
     <body>
      <div class="container">
   
           <div class="row">
             <div class="col-md-7" >
-            
               <div class="center jumbotron" id="top-main">
                   <h1 id="top-main-title">TaskApp</h1>
                   <p>TaskAppは簡易ToDoツールです。</p>
                   <p>↓↓初めてのご利用↓↓</p>
-               　　 <%= link_to "アカウント作成", signup_path, class: "btn btn-lg btn-success" %>
+                 
+               　　 <%= link_to "アカウント作成", signup_path, class: "btn btn-lg btn-success form-acount " %>
+               　
               </div>
-            </div>
+          </div>
         
           <div class="col-md-4">
                 <h2 class ="login">ログイン</h2>
@@ -45,8 +46,7 @@
                     <%= f.submit "ログイン", class: "btn btn-primary btn-block btn-form" %>
                   <% end %>
                 <% end %>
-        
-         </div>   
+          </div>   
      </div>
     </body>
 </html>
