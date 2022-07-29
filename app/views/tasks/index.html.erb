@@ -14,11 +14,14 @@
    
    
    <tbody>
-     <tr>
-     <td>テスト</td>
-     <td>テスト</td>
+     <% @tasks.each do |task| %>
+      <tr>
+       <td><%= link_to task.name,user_task_path(@user.task)%></td>
+       <td><%= l(task.created_at, format::long) %></td>
+      </tr>
+     <% end %>
  
-     </tr>
+     
    </tbody>
    </table>
    
