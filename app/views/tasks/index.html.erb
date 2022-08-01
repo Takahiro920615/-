@@ -16,8 +16,12 @@
    <tbody>
      <% @tasks.each do |task| %>
       <tr>
-       <td><%= link_to task.name,user_task_path(@user, task)%></td>
+       <td><%= link_to task.name,user_task_path(@user, @task.ids), id:"task-name"%></td>
        <td><%= l(task.created_at, format: :long) %></td>
+       <td>
+        <%= link_to "編集",edit_user_task_path(@user, @task.ids), class: "btn btn-success"%>
+        <%= link_to "削除",user_task_path(@user, @task.ids), method: :delete,%>
+       </td>
       </tr>
      <% end %>
  
