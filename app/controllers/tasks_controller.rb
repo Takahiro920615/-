@@ -10,12 +10,16 @@ class TasksController < ApplicationController
    end
    
    def show
-
+    @task = Task.find(params[:id])
    end
    
    def new
      @task = Task.new
    end
+   
+   def edit
+   end
+   
    
    def create
       @task = @user.tasks.build(task_params)
@@ -24,7 +28,9 @@ class TasksController < ApplicationController
       redirect_to user_tasks_url @user
     else
       render :new
-      
+    end
+    
+    def update
     end
    end
    
