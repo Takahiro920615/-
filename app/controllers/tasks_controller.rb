@@ -5,8 +5,6 @@ class TasksController < ApplicationController
   
    def index
     @tasks = @user.tasks.order(created_at: :desc)
-    
-  
    end
    
    def show
@@ -14,10 +12,11 @@ class TasksController < ApplicationController
    end
    
    def new
-     @task = Task.new
+     @task = Task.find(params[:id])
    end
    
    def edit
+     @task = Task.all
    end
    
    
@@ -29,14 +28,18 @@ class TasksController < ApplicationController
     else
       render :new
     end
+   end
     
     def update
-    end
-   end
-   
-  def destroy
     
-  end
+     if @task.update_attributes(task_params)
+         flash[:success]= "タスクの詳細を更新しました。"
+         redirect_to user_task_url(@task,@task)
+     else
+         render :edit
+     end
+    end
+   
 
   private
   
@@ -47,5 +50,4 @@ class TasksController < ApplicationController
    def task_params
      params.require(:task).permit(:name, :description)
    end
-   
 end
