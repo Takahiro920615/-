@@ -1,14 +1,14 @@
 <h1>タスク編集</h1>
 <div class = "row">
   <div class = "col-md-8 col-md-offset-2">
-    <%= form_with(model: @task, url: user_task_path(@user, @task), local: true, method: :patch) do |f|%>
+    <%= form_with(model: @task, url: user_task_path(@user, @task_id), local: true, method: :patch) do |f|%>
     
     
-     <%= f.label :name, class:"label-form"%>
+     <%= f.label :name, class: "label-form"%>
      <%= f.text_field :name, class: "form-control"%>
      
      <%= f.label :description, class:"label-label"%>
-     <%= f.text_area  :description, rows: 5, class:"form-control "%>
+     <%= f.text_area  :description, rows: 5, class: "form-control "%>
      
      <%= f.submit"更新", class: "btn btn-primary btn-form"%>
      <%= link_to "キャンセル",user_tasks_path(@user), class:"btn btn-default btn-form"%>

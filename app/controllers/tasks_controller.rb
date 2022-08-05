@@ -12,11 +12,11 @@ class TasksController < ApplicationController
    end
    
    def new
-     @task = Task.find(params[:id])
+    @task = Task.new
    end
    
    def edit
-     @task = Task.all
+     @task_id = params[:id]
    end
    
    
@@ -31,13 +31,11 @@ class TasksController < ApplicationController
    end
     
     def update
-    
-     if @task.update_attributes(task_params)
-         flash[:success]= "タスクの詳細を更新しました。"
-         redirect_to user_task_url(@task,@task)
-     else
-         render :edit
-     end
+    @task=Task.find(params[:id])
+    @task.name = params[:name]
+    @task.description = params[:description]
+    @task.save
+     redirect_to user_task_url @user,@task
     end
    
 
