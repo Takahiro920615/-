@@ -5,6 +5,7 @@ class TasksController < ApplicationController
   
    def index
     @tasks = @user.tasks.order(created_at: :desc)
+   
    end
    
    def show
@@ -36,6 +37,12 @@ class TasksController < ApplicationController
     @task.description = params[:description]
     @task.save
      redirect_to user_task_url @user,@task
+    end
+    
+    def destroy
+    @task = Task.find(params[:id])
+    @task.destroy
+    redirect_to user_tasks_path @user
     end
    
 
