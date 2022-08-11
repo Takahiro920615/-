@@ -14,7 +14,8 @@
                   </tr>
                   <tr>
                     <th class = "active col-md-2">詳細</th>
-                    <td class = "col-md-10"><%= @task.description %></td>
+                    <td class = "col-md-10"><a><%= convert_url_into_a_tag(h(@task.description)).html_safe %></a></td>
+                    
                   </tr>
                   <tr>
                     <th class ="active col-md-2">作成日</th>
@@ -22,7 +23,7 @@
                   </tr>
                   <tr>
                     <th class = "active col-md-2">更新日</th>
-                    <td class = "col-md-10"><%= @task.updated_at %></td>
+                    <td class = "col-md-10"><%= @task.created_at %></td>
                   </tr>
               </tbody>
             </table>
