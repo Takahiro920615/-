@@ -12,3 +12,4 @@ ja:
         email: メールアドレス
         picture: ユーザー画像
         password: パスワード
+        created_at: 作成日
