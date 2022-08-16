@@ -2,6 +2,7 @@ class TasksController < ApplicationController
    before_action :set_user
    before_action :set_task, only: %i(show edit update destroy)
    
+   
   
    def index
     @tasks = @user.tasks.order(created_at: :desc)
@@ -63,4 +64,6 @@ class TasksController < ApplicationController
         redirect_to user_tasks_url @user
       end
    end
+   
+ 
 end

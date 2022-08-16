@@ -14,13 +14,19 @@
             <% @users. each do |user| %>
             <tr>
               <td><%= link_to user.name, user %></td>
-              <td><%= link_to "削除", user, class: "btn btn-danger btn-sm pull-right" %></td>
-              
+                    
+              <td>
+              　<% if current_user.admin? && !current_user?(user) %>
+                <%= link_to "削除", user, method: :delete,
+                 date:{ comfirm: "#{user.name}を削除してよろしいですか？"},
+                 class: "btn btn-danger btn-sm pull-right" %>
+                <% end %>
+              </td>
             </tr>
-            
             <% end %>
           </tbody>
         </table>
         <%= will_paginate %>
       </div>
     </div>
+
