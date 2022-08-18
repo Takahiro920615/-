@@ -26,7 +26,6 @@ guest_user = User.find(2)
   description = "タスク詳細#{n + 1}"
   admin_user.tasks.create!(name: task_name, description: description)
   guest_user.tasks.create!(name: task_name, description: description)
-  
 end
 
 puts "Tasks Created"
