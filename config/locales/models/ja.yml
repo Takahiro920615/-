@@ -7,6 +7,7 @@ ja:
       task:
         name: 名称
         description: 詳細
+        created_at: 作成日
       user:
         name: 名前
         email: メールアドレス
