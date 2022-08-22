@@ -33,18 +33,15 @@ class TasksController < ApplicationController
     end
    end
     
-  def update
-      @task = Task.find(params[:user_id])
-      @task.name = params[:name]
-      @task.description = params[:description]
-      
-       if @task.save
-          flash[:success] = "タスクを更新しました。"
-          redirect_to user_task_url(@user, @task)
-    　 else
-          render :edit
-       end
-  end
+   def update
+    if @task.update_attributes(task_params)
+      flash[:success] = "タスクを更新しました。"
+      redirect_to user_task_url(@user, @task)
+    else
+      render :edit
+    end
+   end
+
     
     def destroy
     @task = Task.find(params[:id])
