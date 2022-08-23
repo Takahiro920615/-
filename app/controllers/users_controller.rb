@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   before_action :admin_user, only: %i(destroy index)
   before_action :admin_or_correct_user, only: %i(edit update destroy)
  
+ 
   def new
     @user = User.new
   end
@@ -22,7 +23,6 @@ class UsersController < ApplicationController
 
   
   def edit
-   
   end
   
   def create
@@ -37,6 +37,12 @@ class UsersController < ApplicationController
   end
   
   def update
+    if @user.update_attributes(user_params)
+      flash[:success] = "ユーザー情報を更新しました。"
+      redirect_to @user
+    else
+      render :edit
+    end
   end
   
   def destroy
