@@ -6,6 +6,10 @@ class ApplicationController < ActionController::Base
     @current_user = User.find(session[:user_id]) if session[:user_id]
   end
   
+  def correct_user
+    redirect_to root_url unless current_user?(@user)
+  end
+  
   def limitation_login_user
     if @current_user
       flash[:danger] = "すでにログインしています。"

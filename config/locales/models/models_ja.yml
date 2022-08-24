@@ -14,3 +14,4 @@ ja:
         picture: ユーザー画像
         password: パスワード
         created_at: 作成日
+        password_confirmation: パスワード再入力

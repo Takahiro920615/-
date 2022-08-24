@@ -2,6 +2,7 @@ class TasksController < ApplicationController
    before_action :set_user
    before_action :set_task, only: %i(show edit update destroy)
    before_action :logged_in_user, only: %i(edit index new show)
+   before_action :correct_user
    
    
   
@@ -46,6 +47,7 @@ class TasksController < ApplicationController
     def destroy
     @task = Task.find(params[:id])
     @task.destroy
+    flash[:success] = "#{@user.name}のデータを削除しました。"
     redirect_to user_tasks_path @user
     end
    
