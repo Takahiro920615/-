@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i( show edit update destroy)
   before_action :logged_in_user, only: %i(index show edit update destroy)
-  before_action :correct_user
-  before_action :admin_user, only: %i(destroy index)
+  before_action :admin_user, only: %i(index destroy)
+  before_action :correct_user, only: %i(edit update)
   before_action :admin_or_correct_user, only: %i(edit update destroy)
  
  
@@ -70,7 +70,6 @@ class UsersController < ApplicationController
     end
     
     def correct_user
-       @user= User.find(params[:id])
        redirect_to(root_url) unless current_user?(@user)
     end
    
